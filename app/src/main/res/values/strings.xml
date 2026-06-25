@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">M-REZO</string>
+    <string name="ussd_accessibility_description">Permet a M-REZO de saisir les reponses des menus USSD etape par etape.</string>
+</resources>

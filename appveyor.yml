@@ -1,0 +1,36 @@
+version: 1.0.{build}
+
+image: Ubuntu2204
+
+environment:
+  JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+  ANDROID_HOME: /usr/local/android-sdk
+  GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.jvmargs="-Xmx2048m"
+
+install:
+  # Install Android SDK Command Line Tools
+  - sudo apt-get update
+  - sudo apt-get install -y wget unzip
+  - wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+  - mkdir -p $ANDROID_HOME/cmdline-tools
+  - unzip -q commandlinetools-linux-11076708_latest.zip -d $ANDROID_HOME/cmdline-tools
+  - mv $ANDROID_HOME/cmdline-tools/cmdline-tools $ANDROID_HOME/cmdline-tools/latest
+  - export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+
+  # Accept licenses and install required packages
+  - yes | sdkmanager --licenses
+  - sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
+
+build_script:
+  - chmod +x gradlew
+  - ./gradlew assembleDebug --stacktrace --no-daemon
+
+artifacts:
+  - path: app/build/outputs/apk/debug/*.apk
+    name: M-REZO-debug
+
+on_success:
+  - echo "Build successful! APK generated."
+
+on_failure:
+  - echo "Build failed. Check logs for errors."
