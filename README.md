@@ -1,6 +1,6 @@
 # M-REZO - Application de Gestion Mobile Money
 
-[![Build status](https://ci.appveyor.com/api/projects/status/github/VOTRE-USERNAME/m-rezo?svg=true)](https://ci.appveyor.com/project/VOTRE-USERNAME/m-rezo)
+[![Android CI Build](https://github.com/Lecteur23/M.REZO/actions/workflows/android-build.yml/badge.svg)](https://github.com/Lecteur23/M.REZO/actions)
 
 Application Android pour automatiser les opérations USSD des opérateurs mobile money en Afrique.
 
