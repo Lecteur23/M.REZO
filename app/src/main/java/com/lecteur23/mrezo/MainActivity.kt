@@ -1,4 +1,4 @@
-package com.example.m_rezo
+package com.lecteur23.mrezo
 
 import android.Manifest
 import android.content.Context
@@ -99,7 +99,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.m_rezo.ui.theme.MREZOTheme
+import com.lecteur23.mrezo.ui.theme.MREZOTheme
 import kotlinx.coroutines.delay
 import org.json.JSONArray
 import org.json.JSONObject

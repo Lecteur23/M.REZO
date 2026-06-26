@@ -1,4 +1,4 @@
-package com.example.m_rezo.ui.theme
+package com.lecteur23.mrezo.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

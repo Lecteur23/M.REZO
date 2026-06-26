@@ -1,4 +1,4 @@
-package com.example.m_rezo
+package com.lecteur23.mrezo
 
 import android.accessibilityservice.AccessibilityService
 import android.content.Context

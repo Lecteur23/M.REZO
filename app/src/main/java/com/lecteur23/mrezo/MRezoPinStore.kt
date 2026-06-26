@@ -1,4 +1,4 @@
-package com.example.m_rezo
+package com.lecteur23.mrezo
 
 import android.content.Context
 import android.content.SharedPreferences

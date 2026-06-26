@@ -1,4 +1,4 @@
-package com.example.m_rezo
+package com.lecteur23.mrezo
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
