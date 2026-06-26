@@ -21,5 +21,10 @@ local.properties
 # Debug files
 *.log
 *.zip
-*.png
-emulator-*
+emulator-*.png
+emulator-*.log
+bugreport-*.zip
+mrezo-emulator-screen.png
+
+# Keep drawable resources
+!app/src/main/res/**/*.png
